@@ -240,6 +240,9 @@ protected:
   uint16_t processPacketsUntil(uint8_t *buffer, uint8_t waitforpackettype,
                                uint16_t timeout);
 
+  // call the subscribe callback
+  void callSub(Adafruit_MQTT_Subscribe * sub);
+
   // Shared state that subclasses can use:
   const char *servername;
   int16_t portnum;
